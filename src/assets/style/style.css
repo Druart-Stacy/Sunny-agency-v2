@@ -1,0 +1,138 @@
+/* Ceci est votre bloc */
+.intro {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1200px;
+  align-items: flex-start;
+  margin: auto;
+  padding: 40px;
+}
+@media (min-width: 768px) {
+  .intro {
+    flex-direction: row;
+    padding: 80px;
+  }
+}
+
+.intro__heading {
+  margin-bottom: 15px;
+  font-size: 2.5em;
+  color: #a5b4fc;
+  font-family: "Montserrat", sans-serif;
+}
+@media (min-width: 768px) {
+  .intro__heading {
+    font-size: 3.5em;
+  }
+}
+
+.intro__image {
+  padding-left: 0;
+  justify-content: flex-end;
+}
+@media (min-width: 768px) {
+  .intro__image {
+    padding-left: 80px;
+  }
+}
+
+.intro__text {
+  font-size: 1.1em;
+  color: #f9f8ff;
+}
+.intro__text--highlight {
+  color: #a5b4fc;
+  font-style: normal;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__toggle {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .navbar__toggle {
+    display: block;
+  }
+}
+
+.navbar__links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.navbar__links.show {
+  display: flex;
+}
+
+.navbar__item {
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.navbar__link {
+  font-size: 1.2em;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.navbar__link--purple {
+  color: blue;
+}
+
+.navbar__brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1em;
+  background-color: white;
+}
+
+p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+header {
+  background-color: white;
+  padding: 20px 50px;
+  background-image: url(/src/assets/img/image-header.jpg);
+}
+header h1 {
+  color: white;
+}
+header .titre-header {
+  color: white;
+  text-align: center;
+}
+
+#menu-icon {
+  float: right;
+  color: white;
+}
+
+.intro p {
+  display: flex;
+  flex-direction: row;
+}
+
+.cerise {
+  background-image: url(/src/assets/img/cerise.jpg);
+}
+
+.orabge {
+  background-image: url(/src/assets/img/orangeb.jpg);
+}/*# sourceMappingURL=style.css.map */
