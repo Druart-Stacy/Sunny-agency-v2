@@ -1,121 +1,32 @@
-/* Ceci est votre bloc */
-.intro {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  max-width: 1200px;
-  align-items: flex-start;
-  margin: auto;
-  padding: 40px;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    padding: 80px;
-  }
-}
-
-.intro__heading {
-  margin-bottom: 15px;
-  font-size: 2.5em;
-  color: #a5b4fc;
-  font-family: 'Montserrat', sans-serif;
-
-  @media (min-width: 768px) {
-    font-size: 3.5em;
-  }
-}
-
-.intro__image {
-  padding-left: 0;
-  justify-content: flex-end;
-
-  @media (min-width: 768px) {
-    padding-left: 80px;
-  }
-}
-
-.intro__text {
-  font-size: 1.1em;
-  color: #f9f8ff;
-
-  &--highlight {
-    color: #a5b4fc;
-    font-style: normal;
-  }
-}
-
-.navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar__toggle {
-  display: none;
-  font-size: 2em;
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    display: block;
-  }
-}
-
-.navbar__links {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-  &.show {
-    display: flex;
-  }
-}
-
-.navbar__item {
-  margin-left: 0;
-  margin-top: 10px;
-}
-
-.navbar__link {
-  font-size: 1.2em;
-  padding: 10px;
-  background-color: #fff;
-  text-align: center;
-  border-bottom: 1px solid #ccc;
-
-  &--purple {
-    color: blue;
-  }
-}
-
-.navbar__brand {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
+/* Structure de la page */
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 1em;
-  background-color:white;
+  background-color: white;
+  margin: 0;
+  padding: 0;
 }
-p {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+
+/* Header */
 header {
   background-color: white;
   padding: 20px 50px;
   background-image: url(/src/assets/img/image-header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
 
-  h1 {
-    color: white;
-  }
+header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .titre-header {
-    color: white;
-    text-align: center;
-  }
+header h1 {
+  color: white;
+  margin: 0;
 }
 
 #menu-icon {
@@ -123,13 +34,87 @@ header {
   color: white;
 }
 
-.intro p {
+.titre-header {
+  color: white;
+  text-align: center;
+}
+
+/* Section une */
+.une, .deux, .cerise, .orange {
+  text-align: center;
+  /* padding: 20px; */
+}
+
+.une img, .deux img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Section cerise et orange avec fond */
+.cerise {
+  background-image: url(/src/assets/img/cerise.jpg);
+   /* Pour afficher l'image en entier */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 100%;
+  color: white;
+  width: 1200px;   /* Définit la largeur de la div à 200 pixels */
+  height: 1000px;
+}
+
+.orange {
+  background-image: url(/src/assets/img/orangeb.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 100%;
+  color: white;
+  width: 1200px;   /* Définit la largeur de la div à 200 pixels */
+  height: 1000px;
+}
+
+/* Footer */
+footer .contact {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
-.cerise{
-  background-image: url(/src/assets/img/cerise.jpg);;
+
+footer .contact .contact-item {
+  margin: 20px 0;
+  text-align: center;
 }
-.orabge{
-  background-image: url(/src/assets/img/orangeb.jpg);;
+
+footer .contact img {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 50%;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+  .navbar__links {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar__item {
+    margin: 5px 0;
+  }
+}                                     
+  .four-images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh; /* Hauteur de la fenêtre d'affichage */
+  }
+
+  .sect {
+    flex: 50%; /* Prend 50% de la largeur du conteneur parent */
+    height: 50%; /* Prend 50% de la hauteur du conteneur parent */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans les dimensions */
+  }
