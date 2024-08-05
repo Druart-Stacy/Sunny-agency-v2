@@ -1,13 +1,289 @@
+@media (max-width: 768px) {
 /* Structure de la page */
-body {
-  font-family: "Manrope", sans-serif;
-  font-size: 1em;
-  background-color: white;
-  margin: 0;
-  padding: 0;
-}
+      body {
+        font-family: "Manrope", sans-serif;
+        font-size: 1em;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+      }
 
-/* Header */
+      /* Header */
+      header {
+        background-color: white;
+        padding: 20px 50px;
+        background-image: url(/src/assets/img/image-header.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+      }
+      a{
+        text-decoration: none; /* Enlève le surlignement (soulignement) */
+        color: #2C7566;
+      }
+      header .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        color: white;
+        margin: 0;
+      }
+
+      #menu-icon {
+        float: right;
+        color: white;
+      }
+
+      .titre-header {
+        color: white;
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+      }
+
+      /* Section une */
+      .une, .deux, .cerise, .orange {
+        text-align: center;
+        /* padding: 20px; */
+      }
+
+      .une img, .deux img {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      /* Section cerise et orange avec fond */
+      .cerise {
+        background-image: url(/src/assets/img/cerise.jpg);
+        background-size: cover;
+        /* Pour afficher l'image en entier */
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        max-width: 100%;
+        color: white;
+        width: 1200px;   /* Définit la largeur de la div à 200 pixels */
+        height: 1000px;
+      }
+
+      .orange {
+        background-image: url(/src/assets/img/orangeb.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        max-width: 100%;
+        color: white;
+        width: 1200px;   /* Définit la largeur de la div à 200 pixels */
+        height: 1000px;
+        background-size: cover;
+      }
+
+      /* Footer */
+      footer .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      footer .contact .contact-item {
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      footer .contact img {
+        width: 100%;
+        max-width: 150px;
+        border-radius: 50%;
+      }
+
+      /* Mobile responsiveness */
+
+        header {
+          padding: 10px 20px;
+        }
+        .barbar__links {
+          flex-direction: column;
+          text-align: center;
+          color: #2C7566;
+        }
+        .navbar__item {
+          margin: 5px 0;
+          color: #2C7566;
+        }
+
+        .four-images {
+          display: flex;
+        flex-direction: column;
+        height: 100vh; /* Ajustez en fonction de vos besoins */
+      }
+
+      .row {
+        display: flex;
+        flex: 1;
+      }
+
+      .sect, .sect2, .sect3, .sect4 {
+        flex: 1;
+        background-size: cover;
+      }
+
+      .sect {
+        background-image: url('/src/assets/img/milkbottles.jpg');
+      }
+
+      .sect2 {
+        background-image: url('/src/assets/img/orange.jpg');
+      }
+
+      .sect3 {
+        background-image: url('/src/assets/img/cone-glace.jpg');
+      }
+
+      .sect4 {
+        background-image: url('/src/assets/img/sugarcubes.jpg');
+        object-position: left bottom;
+      }
+      .SunnysideFooter{
+        text-align: center;
+        color: #2C7566;
+        font-weight: bold;
+        font-size: 35px;
+        background-color:#5ffcdd;
+      }
+      .NavFooter {
+        background-color:#5ffcdd;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      // footer {
+      //   background-color: #A3D5D3;
+      //   padding: 40px 20px;
+      //   text-align: center;
+      // }
+
+      .footer-content {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      /* Ajout de styles pour le menu hamburger */
+      #menu-icon {
+          display: none;
+      cursor: pointer;
+          font-size: 30px;
+          }
+
+      #menu-toggle {
+          display: none;
+          }
+
+      #menu {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          }
+
+      #navbarLinks {
+          display: flex;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          }
+
+      .navbar__item {
+          margin-left: 20px;
+          }
+
+      .navbar__link {
+          text-decoration: none;
+          color: #000;
+          }
+        }                              
+        
+  // --------------------------------------------------ecran de 768px-------------------------------------------------------
+@media (max-width: 768px) {
+      #menu-icon {
+          display: block;
+            }
+
+      #navbarLinks {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          text-align: center;
+          }
+
+      #menu-toggle:checked + #navbarLinks {
+          display: flex;       
+        }
+      .navbar__item {
+          margin: 10px 0;
+          }
+      }
+      .réseaux{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          gap: 1px;
+          row-gap: 1px;
+          column-gap: 1px;
+          background-color:#5ffcdd;
+      }
+
+
+      ///menu hamburgeur
+      .mobile-container {
+        max-width: 480px;
+        margin: auto;
+        background-color: #555;
+        height: 500px;
+        color: white;
+        border-radius: 10px;
+      }
+
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+      }
+      .topnav #myLinks {
+        display: none;
+      }
+
+
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+
+      .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .active {
+        background-color: #04AA6D;
+        color: white;
+      }
+// --------------------------------------------------ecran pc-------------------------------------------------------
+@media (min-width: 768px) {
 header {
   background-color: white;
   padding: 20px 50px;
@@ -18,43 +294,78 @@ header {
   text-align: center;
 }
 
-header .content {
+
+
+.une {
   display: flex;
-  justify-content: space-between;
+  flex: 1;
+  background-color: #f7df1e; /* Yellow background color */
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  display: flex;
   align-items: center;
 }
 
-header h1 {
-  color: white;
-  margin: 0;
+.oeuf {
+  max-width: 100px; /* Adjust size as necessary */
+  height: auto;
+  margin-right: 20px; /* Space between image and text */
 }
 
-#menu-icon {
-  float: right;
-  color: white;
+p {
+  max-width: 400px; /* Adjust text width as necessary */
+  color: #000; /* Text color */
 }
 
-.titre-header {
-  color: white;
-  text-align: center;
+p strong {
+  display: block;
+  margin-top: 10px; /* Space between lines */
 }
 
-/* Section une */
-.une, .deux, .cerise, .orange {
-  text-align: center;
-  /* padding: 20px; */
+p strong:first-of-type {
+  margin-top: 0; /* No margin for the first strong element */
 }
 
-.une img, .deux img {
-  width: 100%;
-  max-width: 100%;
+.deux {
+  display: flex;
+  flex: 1;
+  background-color: #f7df1e; /* Yellow background color */
+  align-items: center;
+  justify-content: center;
 }
 
-/* Section cerise et orange avec fond */
-.cerise {
+section {
+  display: flex;
+  align-items: center;
+}
+
+.oeuf {
+  max-width: 100px; /* Adjust size as necessary */
+  height: auto;
+  margin-right: 20px; /* Space between image and text */
+}
+
+p {
+  max-width: 400px; /* Adjust text width as necessary */
+  color: #000; /* Text color */
+}
+
+p strong {
+  display: block;
+  margin-top: 10px; /* Space between lines */
+}
+
+p strong:first-of-type {
+  margin-top: 0; /* No margin for the first strong element */
+}
+ /* Section cerise et orange avec fond */
+ .cerise {
   background-image: url(/src/assets/img/cerise.jpg);
   background-size: cover;
-   /* Pour afficher l'image en entier */
+  /* Pour afficher l'image en entier */
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
@@ -75,82 +386,4 @@ header h1 {
   height: 1000px;
   background-size: cover;
 }
-
-/* Footer */
-footer .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-footer .contact .contact-item {
-  margin: 20px 0;
-  text-align: center;
-}
-
-footer .contact img {
-  width: 100%;
-  max-width: 150px;
-  border-radius: 50%;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  header {
-    padding: 10px 20px;
-  }
-  .navbar__links {
-    flex-direction: column;
-    text-align: center;
-  }
-  .navbar__item {
-    margin: 5px 0;
-  }
-}                                     
-  .four-images {
-    display: flex;
-  flex-direction: column;
-  height: 100vh; /* Ajustez en fonction de vos besoins */
-}
-
-.row {
-  display: flex;
-  flex: 1;
-}
-
-.sect, .sect2, .sect3, .sect4 {
-  flex: 1;
-  background-size: cover;
-}
-
-.sect {
-  background-image: url('/src/assets/img/milkbottles.jpg');
-}
-
-.sect2 {
-  background-image: url('/src/assets/img/orange.jpg');
-}
-
-.sect3 {
-  background-image: url('/src/assets/img/cone-glace.jpg');
-}
-
-.sect4 {
-  background-image: url('/src/assets/img/sugarcubes.jpg');
-  object-position: left bottom;
-}
-.SunnysideFooter{
-  text-align: center;
-}
-.NavFooter{
-display: flex;
-}
-.réseaux{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 1px;
-  row-gap: 1px;
-  column-gap: 1px;
 }
